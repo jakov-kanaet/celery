@@ -170,7 +170,7 @@ class MongoBackend(BaseBackend):
         meta = {
             '_id': task_id,
             'status': state,
-            'result': self.encode(result),
+            'result': result,
             'date_done': datetime.utcnow(),
             'traceback': self.encode(traceback),
             'children': self.encode(
